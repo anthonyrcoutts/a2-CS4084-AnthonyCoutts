@@ -1,18 +1,17 @@
-# R + ggplot2 + R Studio
+# R + ggplot2 + dyplr (also RColorBrewer and scales for colors)
+R is a programming language primarily used for statistical techniques, data manipulation and data visualizations. It is relatively easy to acess by simply downloading R and R studio (or another IDE) on to your device. It does require programming and coding knowledge specifically coding in R.
 
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
+To build the visualization, I first filtered out null values and made sure columns were set to the proper type using dyplr. From there I created a ggplot using geom_point, setting flipper length as the x axis, body mass as the y axes, species as the color and bill length as the size in the aesthetics. After that I changed the x and y axis ranges and their labels. FInally, I changed the colors of the species to match the original visualization.
 
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
+Fortunately, I have a pretty strong background in R and specifically using ggplot to build visualizations so, this wasn't very difficult for me. That said, I can see how someone not experienced with R and ggplot may struggle at first to put together a plot like this. That said, there are plenty of resources and videos to help guide someone. R and ggplot make it easy to make the plot customizeable and easy to change small details like the plot background, colors, legend position and many more customizations. Overall, R and ggplot allows for highly customizeable visualization and becomes easy to use after some practice.
 
 # d3
 
-(And so on...)
+D3 is a powerful library to build dynamic and creative visualizations. It is relatively easy to access by simply installing JS and an IDE on to your machine. That said, it does require significant programming knowledge in JS and html. It also takes some time to learn the D3 syntax and how it works with things like data loading.
+
+To build this visualization I set the visualization's dimensions and margins as well as a space for it to go on the web page. Then I loaded the data in and cleaned it by filtering out missing values. Then I created the svg. From there a created the linear scales for the x and y axis as well as the size scale. Then I specified the color pallete to match the original visualization and set up the legends for size and color on the right side. Then I added the axes using the x and y scales created before and created a grey background grid with white tick lines to match the original visualization. Finally, added the dots using the x, y, size and color scales created before.
+
+The process of building this visualization did take awhile for me. I have little experience with D3 so I had to learn a lot to put things together like loading in the data. That said, there are plenty of example plots which can be used to help guide people to build their own visualizations. D3 is highly customizeable which is one of its main advantages. Features can be placed anywhere with ease, aesthetics are easily defined and scales are easily manipulated. Overall, D3 is a powerful tool, expecially for building interactive and custom visualizations.
 
 # Python + Seaborn + Matplotlib
 
