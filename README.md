@@ -1,3 +1,5 @@
+Code, visualization images and files can be found in their respective folders of this repo.
+
 # R + ggplot2 + dyplr (also RColorBrewer and scales for colors)
 R is a programming language primarily used for statistical techniques, data manipulation and data visualizations. It is relatively easy to acess by simply downloading R and R studio (or another IDE) on to your device. It does require programming and coding knowledge specifically coding in R.
 
@@ -14,6 +16,12 @@ To build this visualization I set the visualization's dimensions and margins as 
 The process of building this visualization did take awhile for me. I have little experience with D3 so I had to learn a lot to put things together like loading in the data. That said, there are plenty of example plots which can be used to help guide people to build their own visualizations. D3 is highly customizeable which is one of its main advantages. Features can be placed anywhere with ease, aesthetics are easily defined and scales are easily manipulated. Overall, D3 is a powerful tool, expecially for building interactive and custom visualizations.
 
 # Python + Seaborn + Matplotlib
+
+Python and its libraries seaborn and matplotlib are fiarly popular selections for data visualizations. Python has a relatively ease of access by installing python and an IDE to your machine. Python is also known as a more beginner friendly language but does require programming skills nonetheless.
+
+Tp build the visualization I read in the data and set the color pallete to match the original version. I set the figure size and used seaborn to plot the data, assigning flipper length as the x variable, body mass as the y variable, species as the hue and bill length as the size. From there a set some minor features to match the visualization such as the grey background with white tick lines, legend location and x and y labels and limits.
+
+The recreation of the original visualization was pretty simple in python and its libraries. The small features like the plot background were easy to customize. Python seems like it strikes a good balance between a beginner freindly visualization tool and ability to customize visuals. One critic would be that the size of the dots isn't very different.
 
 # Flourish
 
@@ -32,8 +40,22 @@ To recreate the visualizations in Tableau I dragged flipper length to the x axis
 While Tableau was fairly easy to recreate the visualization, I did have some struggles. First changing the background of the figure was not the easy to find. Also the size scaling of the dots makes it hard to tell the difference between smaller bill lengths and larger ones, and I couldn't find a way to fix this. Tableau does a great job creating simple visualizations for users without much coding background but struggles to allow users make smaller and nuanced customizations like changing the size scaling and background. Overall, I'd say Tableau has a low barrier to entry and excels at building simple visualizations for users with little coding background however, it struggles to make more advanced visualizations and may not be as useful for users with a strong coding background.
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
 
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+For this assignment I turned the D3 visualization into an interactive visualization (see Enhanced Visualization tab on github pages url). In my visualization you can click on the data point of a given species and it will lower the transparency of the other data points not in that group. You can also click the legend to get the same effect of highlighting a specific group. I also added a rug plot to the bottom which can also be clicked and produce the same effect. To return the highlighting back to normal simply click anywhere on the background or click another data point to highlight a different group. This achievement allows users to better inspect the data of different species. I did this by creating a function that can be used in the.on("click"...) part of the data and legend that will increase the opacity of the selected group and decrease the opacity of the other groups in a smooth transition. I also changed the pointer when hovering over data and the legend to indicate to the user that you can click them.
+
+
+Additionally, I animated the r ggplot into a gif that cycles through the groups. Once again, this allows users to see groups stand alone and then compare them together. To do this I used the gganimate package and the transition_states function, setting the transition to be the species and an end state with all species shown for a longer duration.
+
+## Design Achievements
+
+For the design achievement I added a rug plot for the x and y axes of the D3 visualization that allows users to better see the distribution of the data by species. This makes it so not only overalll trends amooung all species are shown but also the distribution of data amoungst each species. The rugs were created using a rectangle on the x and y axis to house the rugs. Then, lines were used to build the rugs using filtered data for that one species on the given axis. The rugs were staggered by species to clearly see the distribution for each species. Additionally, I changed the color pallete and got rid of the grey background so the data can be better seen and the differences are clearer. I used: http://vrl.cs.brown.edu/color to generate my color pallete.
+
+Inspiration for the design:
+<img width="550" height="430" alt="image" src="https://github.com/user-attachments/assets/22a48ce3-cd57-4b61-8c6f-36765c2081c0" />
+
+
+I also made some small styling changes to the animated ggplot.
+
+# Code used from outside sources to start
+https://observablehq.com/@d3/scatterplot-with-shapes
+
