@@ -1,5 +1,7 @@
 Code, visualization images and files can be found in their respective folders of this repo.
 
+Also link to D3 visualization: https://anthonyrcoutts.github.io/a2-CS4084-AnthonyCoutts/scatterrug.html
+
 # R + ggplot2 + dyplr (also RColorBrewer and scales for colors)
 R is a programming language primarily used for statistical techniques, data manipulation and data visualizations. It is relatively easy to acess by simply downloading R and R studio (or another IDE) on to your device. It does require programming and coding knowledge specifically coding in R.
 
