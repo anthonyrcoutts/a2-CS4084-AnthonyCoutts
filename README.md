@@ -66,7 +66,11 @@ Highlighted:
 
 
 
-Additionally, I animated the r ggplot into a gif that cycles through the groups. Once again, this allows users to see groups stand alone and then compare them together. To do this I used the gganimate package and the transition_states function, setting the transition to be the species and an end state with all species shown for a longer duration.
+Additionally, I animated the r ggplot into a gif that cycles through the groups. Once again, this allows users to see groups stand alone and then compare them together. To do this I used the gganimate package and the transition_states function, setting the transition to be the species.
+
+Gif:
+![r_anim](https://github.com/user-attachments/assets/c9fd585d-1d80-4a20-8e54-d8f6fec98f8a)
+
 
 ## Design Achievements
 
